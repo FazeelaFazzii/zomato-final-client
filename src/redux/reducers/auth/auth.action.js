@@ -53,7 +53,7 @@ export const signOut = () => async (dispatch) => {
   try {
     localStorage.removeItem("zomatoUser");
     clearUser();
-    window.location.href = "http://localhost:3000/delivery";//refresh
+    window.location.href = "https://61e6f24bbf34475863ce0496--gallant-edison-5918f8.netlify.app/delivery";//refresh
 
     return dispatch({ type: SIGN_OUT, payload: {} });
   } catch (error) {
