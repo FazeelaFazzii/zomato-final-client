@@ -10,7 +10,7 @@ export const signIn = (userData) => async (dispatch) => {
   try {
     const User = await axios({
       method: "POST",
-      url: "https://zomato-final-server.herokuapp.com/auth/signin",
+      url: `https://zomato-final-server.herokuapp.com/auth/signin`,
       data: { credentials: userData },
     });
     
@@ -32,7 +32,7 @@ export const signUp = (userData) => async (dispatch) => {
   try {
     const User = await axios({
       method: "POST",
-      url: "https://zomato-final-server.herokuapp.com/auth/signup",
+      url: `https://zomato-final-server.herokuapp.com/auth/signup`,
       data: { credentials: userData },
     });
 
@@ -53,7 +53,7 @@ export const signOut = () => async (dispatch) => {
   try {
     localStorage.removeItem("zomatoUser");
     clearUser();
-    window.location.href = "https://61e6f24bbf34475863ce0496--gallant-edison-5918f8.netlify.app/delivery";//refresh
+    window.location.href = `https://61e6f24bbf34475863ce0496--gallant-edison-5918f8.netlify.app/delivery`;//refresh
 
     return dispatch({ type: SIGN_OUT, payload: {} });
   } catch (error) {
