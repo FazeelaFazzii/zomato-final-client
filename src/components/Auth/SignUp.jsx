@@ -25,7 +25,7 @@ function Signup({ isOpen, setIsOpen }) {
 
   const submit = () => {
     dispatch(signUp(userData));
-    setUserData({ email: "", password: "", fullName: "" });
+    setUserData({ email: userData.email, password: userData.password, fullName: userData.password });
     closeModal();
   };
 

@@ -14,7 +14,7 @@ const GoogleAuth = () => {
   useEffect(() => {
     if (token) {
       dispatch(googleAuth(token)).then(
-        () => (window.location.href = "/delivery")
+        () => (window.location.href = `/delivery`)
       );
     }
   }, [token]);
