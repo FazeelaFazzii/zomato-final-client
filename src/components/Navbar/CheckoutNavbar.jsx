@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
+// redux
+import { useSelector } from "react-redux";
+
+
 function CheckoutNavbar() {
 
-    const [user] = useState({
-        fullName:"john doe",
-        image:"https://randomuser.me/api/portraits/"
-    })
+  const reduxState = useSelector((globalState) => globalState.user.user);
     return (
         <>
            <nav className="p-4 flex bg-white shadow-md  w-full items-center">
@@ -24,11 +25,11 @@ function CheckoutNavbar() {
               <div className="border border-gray-300 text-zomato-400 w-12 h-12 rounded-full">
                 <img
                   src="https://thumbs.dreamstime.com/b/young-woman-avatar-cartoon-character-profile-picture-young-brunette-woman-short-hair-avatar-cartoon-character-vector-149728784.jpg"
-                  alt={user?.email}
+                  alt={reduxState.user?.email}
                   className="w-full h-full rounded-full object-cover"
                 />
               </div>
-              {user?.fullName}
+              {reduxState.user?.fullName}
             </div>
             </div>
             </div>
