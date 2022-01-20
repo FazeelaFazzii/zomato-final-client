@@ -54,7 +54,7 @@ function DeliveryCarousel() {
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
-    centerPadding: "180px",
+    centerPadding: "10px",
     responsive: [
       {
         breakpoint: 1024,
